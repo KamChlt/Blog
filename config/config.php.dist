@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * CONFIGURATION
+ */
+const DB_SGBD = 'mysql';
+const DB_SGBD_URL = 'localhost';
+const DB_DATABASE = '';
+const DB_CHARSET = 'utf8';
+const DB_USER = '';
+const DB_PASSWORD = '';
+
+/** FILES */
+//Répertoire chemin complet vers le blog (pour l'upload)
+define('UPLOADS_DIR', realpath(dirname(__FILE__)."/../").'/img/uploads/');
+
+//URL complète vers le répertoire upload (pour l'affichage des images dans l'HTML)
+const UPLOADS_URL      = 'http://camillechallouet59.sites.pixelsass.fr/Php/Blog/img/uploads/';
+
