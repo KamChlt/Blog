@@ -10,6 +10,7 @@ $nom='';
 $mail='';
 $mdp='';
 $id='';
+$roleUtilisateur = 'ROLE_AUTHOR';
 
 try
 {
@@ -26,6 +27,7 @@ try
         $nom=$_POST['nom'];
         $mail=$_POST['mail'];
         $mdp=$_POST['password'];
+        $roleUtilisateur=$_POST['role'];
         
         //le formulaire est posté
         if($mail == '')
@@ -40,6 +42,7 @@ try
             $sth->bindValue('nom',$nom,PDO::PARAM_STR);
             $sth->bindValue('mail',$mail,PDO::PARAM_STR);
             $sth->bindvalue('password',$mdp,PDO::PARAM_STR);
+            $sth->bindvalue('role',$roleUtilisateur,PDO::PARAM_STR);
             
             $sth->execute();
     

@@ -15,5 +15,5 @@ const DB_PASSWORD = '';
 define('UPLOADS_DIR', realpath(dirname(__FILE__)."/../").'/img/uploads/');
 
 //URL complète vers le répertoire upload (pour l'affichage des images dans l'HTML)
-const UPLOADS_URL      = 'http://camillechallouet59.sites.pixelsass.fr/Php/Blog/img/uploads/';
+const UPLOADS_URL      = '';
 

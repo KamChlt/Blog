@@ -1,6 +1,7 @@
 <?php
 
 include('../config/config.php');
+include('../lib/bdd.lib.php');
 
 $vue='editArticle.phtml';
 
@@ -40,17 +41,18 @@ try{
     if(array_key_exists('titre',$_POST))
     {
         var_dump($_POST);
-        $errorForm = []; //Pas d'erreur pour le moment sur les données
+        $errorForm = [];
 
         $id = $_POST['id']; //on récupère l'id de l'article
 
         /* Récupération des données de l'article */
         $titre = trim($_POST['titre']);
         $dateArticle = $_POST['date'];
-        $timeArticle = $_POST['time'];
+        $timeArticle = $_POST['heure'];
         $datePubli = new DateTime($dateArticle.' '.$timeArticle);
         $categorieArticle = $_POST['categorie'];
-        $contenu = trim($_POST['content']);
+        $contenu = trim($_POST['contenu']);
+        $auteur = $_POST['auteur'];
         $picture = isset($_POST['oldPicture'])?$_POST['oldPicture']:null; 
         
         //le formulaire est posté
