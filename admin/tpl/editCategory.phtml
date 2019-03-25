@@ -1,6 +1,6 @@
-<form action="addCategory.php" method="post" enctype="multipart/form-data">
+<form action="editCategory.php" method="post" enctype="multipart/form-data">
     <fieldset>
-        <legend>Ajout d'une catégorie</legend>
+        <legend>Modification d'une catégorie</legend>
             
             <?php if(isset($errorForm) && count($errorForm)>0):?>
               <div class="alert alert-danger" role="alert">
@@ -28,6 +28,6 @@
                   <?php endforeach;?>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary">Ajouter</button>
+            <button type="submit" class="btn btn-primary">Modifier</button>
     </fieldset>
 </form>

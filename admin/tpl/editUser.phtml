@@ -1,6 +1,6 @@
-<form action="addUser.php" method="post" enctype="multipart/form-data">
+<form action="editUser.php" method="post" enctype="multipart/form-data">
     <fieldset>
-        <legend>Ajout d'un utilisateur</legend>
+        <legend>Modification de  l'utilisateur</legend>
            <?php if(isset($errorForm) && count($errorForm)>0):?>
               <div class="alert alert-danger" role="alert">
                 <ul>
@@ -16,32 +16,32 @@
             <?php endif;?>
             <div class="form-group">
               <label for="exampleInputEmail1">Prénom :</label>
-              <input type="text" class="form-control" id="prenom" name="prenom">
+              <input type="text" class="form-control" id="prenom" name="prenom" value="<?=$prenom?>">
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Nom :</label>
-              <input type="text" class="form-control" id="nom" name="nom">
+              <input type="text" class="form-control" id="nom" name="nom" value="<?=$nom?>">
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Adresse E-mail :</label>
-              <input type="email" class="form-control" id="mail" name="mail">
+              <input type="email" class="form-control" id="mail" name="mail" value="<?=$mail?>">
             </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Mot de passe :</label>
-                <input type="password" class="form-control" id="password" name="password">
+                <input type="password" class="form-control" id="password" name="password" value="<?=$mdp?>">
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Confirmation du mot de passe :</label>
-                <input type="password" class="form-control" id="passwordconf" name="passwordconf">
+                <input type="password" class="form-control" id="passwordconf" name="passwordconf" value="<?=$mdpconf?>">
               </div>
             <div class="form-group">
               <label for="exampleSelect1">Rôle :</label>
-              <select class="form-control" id="role" name="role">
+              <select class="form-control" id="role" name="role" value="<?=$roleUtilisateur?>">
               <?php foreach(ROLES as $role=>$nameRole):?> 
                 <option value="<?=$role?>" <?php if($role == $roleUtilisateur):?>selected<?php endif;?>><?=$nameRole?></option>
               <?php endforeach;?>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary">Ajouter</button>
+            <button type="submit" class="btn btn-primary">Modifier</button>
     </fieldset>
 </form>

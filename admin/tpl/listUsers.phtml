@@ -15,8 +15,8 @@
       <td><?=$user['u_lastname']?></td>
       <td><?=$user['u_firstname']?></td>
       <td><?=$user['u_email']?></td>
-      <td></td>
-      <td><a href="delUser.php?id=<?=$user['u_id']?>"><i class="fas fa-trash-alt"></i></a> <a href="#"><i class="fas fa-edit"></i></a></td>
+      <td><?=ROLES[$user['u_role']]?></td>
+      <td><a href="delUser.php?id=<?=$user['u_id']?>"><i class="fas fa-trash-alt"></i></a> <a href="editUser.php?id=<?=$user['u_id']?>"><i class="fas fa-edit"></i></a></td>
     </tr>
     <?php endforeach;?>
   </tbody>

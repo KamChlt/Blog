@@ -1,6 +1,16 @@
 <form action="addArticle.php" method="post" enctype="multipart/form-data">
   <fieldset>
     <legend>Ajouter un article</legend>
+    
+    <?php if(isset($errorForm) && count($errorForm)>0):?>
+      <div class="alert alert-danger" role="alert">
+        <ul>
+          <?php foreach($errorForm as $error):?>
+            <li class="erreur"><?=$error;?></li>
+          <?php endforeach;?>
+        </ul>      
+      </div>
+    <?php endif;?>
       
     <?php if(!is_null($id)):?>
       <input type="hidden" value="<?=$id?>" name="id">
